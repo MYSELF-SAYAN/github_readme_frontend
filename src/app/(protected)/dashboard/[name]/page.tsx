@@ -1,11 +1,18 @@
+// app/(protected)/dashboard/[name]/page.tsx
+
 import React from 'react';
 
-const page = ({ params }: { params: { name: string } }) => {
-  return (
-    <div>
-      <h1>Project: {params.name}</h1>
-    </div>
-  );
+interface PageProps {
+  params: Promise<{ name: string }>;
 }
 
-export default page;
+const Page = async ({ params }: PageProps) => {
+  const resolvedParams = await params;
+  return (
+    <div>
+      <h1>Project: {resolvedParams.name}</h1>
+    </div>
+  );
+};
+
+export default Page;
