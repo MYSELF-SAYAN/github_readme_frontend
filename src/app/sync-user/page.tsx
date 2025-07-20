@@ -1,6 +1,7 @@
 import React from 'react';
 import { auth, clerkClient } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
+import ButtonRedirect from '@/components/Home/ButtonRedirect';
 const Sync = async () => {
     const { userId } = await auth();
     if (!userId) {
@@ -39,6 +40,7 @@ const Sync = async () => {
         <div>
             {/* <Button onClick={redirect("/")}>Sync User Data</Button> */}
             <h1>Syncing user data...</h1>
+            <ButtonRedirect />
         </div>
     );
 }

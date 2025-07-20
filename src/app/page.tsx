@@ -241,7 +241,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-gray-200">
         <div className="container mx-auto text-center text-gray-600">
-          <p>&copy; 2024 GitHub README Generator. Built for developers, by developers.</p>
+          <p>&copy; 2025 GitHub README Generator. Built for developers, by developers.</p>
         </div>
       </footer>
     </div>
