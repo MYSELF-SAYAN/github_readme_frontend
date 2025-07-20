@@ -14,17 +14,17 @@ import axios from 'axios';
 const GenerateParent = () => {
     const [readmeContent, setReadmeContent] = useState("");
     const [isGenerating, setIsGenerating] = useState(false);
-    const projectId= usePathname().split('/')[2]; // Extract project ID from the URL
+    const projectId = usePathname().split('/')[2];
     const baseUrl = process.env.NEXT_PUBLIC_API_URL;
     const handleGenerate = async () => {
-        console.log("Generating README for project ID:", projectId);
+        // console.log("Generating README for project ID:", projectId);
         if (!projectId) {
             console.error("No project ID found");
             return;
         }
         setIsGenerating(true);
         const { data } = await axios.post(`${baseUrl}/readme/generate-readme/${projectId}`);
-        console.log("Generated README content:", data);
+        // console.log("Generated README content:", data);
         setReadmeContent(data.readmeCode || "No content generated");
         setIsGenerating(false);
     };
@@ -48,14 +48,14 @@ const GenerateParent = () => {
         <div className='p-4 mt-2'>
             <div className='flex items-center justify-between mb-4'>
                 <div>
-                    <h1>Generate README</h1>
-                    <p>This page allows you to generate a README file for your project.</p>
+                    <h1 className=' text-2xl font-bold'>Generate README</h1>
+                    <p>Generate stunning README for your project effortlessly with the magic of AI.</p>
                 </div>
                 <Button onClick={handleGenerate}>{isGenerating ? "Generating..." : "Generate README"}</Button>
-                {/* Additional generation functionality can be implemented here */}
+
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-[calc(100vh-300px)] max-h-[10vh]">
-                {/* Left: Markdown Source */}
+
                 <Card className="flex flex-col max-h[30vh]">
                     <CardHeader className="flex-shrink-0">
                         <div className="flex items-center justify-between">
@@ -94,7 +94,7 @@ const GenerateParent = () => {
                     </CardContent>
                 </Card>
 
-                {/* Right: Markdown Preview */}
+
                 <Card className="flex flex-col">
                     <CardHeader className="flex-shrink-0">
                         <CardTitle className="text-lg font-medium">Preview</CardTitle>
@@ -113,7 +113,7 @@ const GenerateParent = () => {
                                                 style={oneDark as any}
                                                 language={match[1]}
                                                 PreTag="div"
-                                                className="rounded-md"
+                                                className="rounded-md prose "
                                             >
                                                 {String(children).replace(/\n$/, '')}
                                             </SyntaxHighlighter>

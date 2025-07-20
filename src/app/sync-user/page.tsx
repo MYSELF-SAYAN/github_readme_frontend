@@ -24,7 +24,12 @@ const Sync = async () => {
                 // password: user.password, // Ensure you handle passwords securely
             }),
         });
-        return redirect("/")
+        if (response.ok) {
+            redirect("/");
+        } else {
+            console.error("Error syncing user data:", response.statusText);
+        }
+        redirect("/");
     };
     syncUserData().catch((error) => {
         console.error("Error syncing user data:", error);
@@ -32,12 +37,11 @@ const Sync = async () => {
 
     return (
         <div>
-            <h1>Sync User Data</h1>
+            {/* <Button onClick={redirect("/")}>Sync User Data</Button> */}
+            <h1>Syncing user data...</h1>
         </div>
     );
 }
 
 export default Sync;
-
-
 

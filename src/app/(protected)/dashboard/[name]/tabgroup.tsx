@@ -1,15 +1,19 @@
+"use client";
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Zap, MessageSquare, ExternalLink } from "lucide-react";
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 const TabGroup = () => {
-    const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
-    const projectId = currentPath.split('/')[2]; // Assuming the project ID is the second segment
+    const currentPath = usePathname();
+    const projectId = currentPath.split('/')[2];
+
     const getTabValue = () => {
         if (currentPath.includes('/generate-readme')) return 'generate-readme';
         if (currentPath.includes('/chat-with-repo')) return 'chat-with-repo';
         return 'generate-readme';
     };
+        // console.log("Current Path:", currentPath, "Project ID:", projectId, "Tab Value:", getTabValue());
     return (
         <div>
             <Tabs value={getTabValue()} className="w-fit">

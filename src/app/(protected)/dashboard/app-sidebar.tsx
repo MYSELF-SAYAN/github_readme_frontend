@@ -25,11 +25,11 @@ const AppSidebar = ({ projects }: { projects: any }) => {
         throw new Error("User ID is required");
       }
       const { name, githubUrl, githubToken } = project;
-      const response = await axios.post(`${baseUrl}/project/create`, {
+      const response = await axios.post(`${baseUrl}/project/`, {
         name, repoUrl: githubUrl, githubToken, userId
       });
       setIsModalOpen(false);
-      console.log("Project created successfully:", response.data);
+      // console.log("Project created successfully:", response.data);
       return response.data;
     } catch (error) {
       console.error("Error fetching projects:", error);
