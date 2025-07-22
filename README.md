@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **ReadmeGenAI**
 
-## Getting Started
+🛠️ **Weekend Fun Project** to explore **RAG (Retrieval-Augmented Generation)** using LangChain, OpenAI, and the GitHub API — introducing **ReadmeGenAI**, an intelligent tool to automatically generate high-quality `README.md` files from GitHub repositories! 📄✨  
 
-First, run the development server:
+## **Index**  
+1. [Introduction](#introduction)  
+2. [Demo](#demo)  
+3. [Features](#features)  
+4. [Technologies](#technologies)  
+5. [Repositories](#repositories)  
+6. [Contributing](#contributing)  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## <a name="introduction"> **Introduction** </a>  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**ReadmeGenAI** is a **readme.md generator powered by AI** that uses **LangChain’s RAG pipeline** and the **GitHub API** to crawl through any public repository and intelligently generate a clean, structured, and professional README file.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Whether you're working on a new open-source project, organizing documentation, or just want to boost the quality of your GitHub profile — this tool makes it seamless.  
 
-## Learn More
+📌 **Built over the weekend** to explore RAG workflows and GitHub API limits!  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## <a name="demo"> **Demo** </a>  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🔗 **Live Site:** [https://github-readme-frontend.vercel.app/](https://github-readme-frontend.vercel.app/)  
+📽️ **Demo Video:** 
 
-## Deploy on Vercel
+https://github.com/user-attachments/assets/9e7fc4d7-f57c-42eb-a02c-dc608774a5e3
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## <a name="features"> **Key Features** </a>  
+
+✅ **Crawls GitHub Repositories** – Uses GitHub API to extract code structure, file contents, and more.  
+✅ **LangChain RAG Pipeline** – Employs Retrieval-Augmented Generation with OpenAI to produce accurate and meaningful readmes.  
+✅ **Embeddings & Vector Search** – Converts file contents to vector embeddings and stores them for efficient retrieval.  
+✅ **OpenAI Function Calling** – Uses structured function calls to ensure the output is well-formatted and sectioned.  
+✅ **Rate-Limit Handling** – Smart fallbacks for API limitations with developer-friendly error handling.  
+✅ **Fully Serverless** – Frontend and backend are hosted on Vercel, making the app fast and globally accessible.  
+✅ **Modern UI** – Clean interface using Tailwind CSS and ShadCN UI for optimal usability.  
+
+---
+
+## <a name="technologies"> **🛠 Tech Stack** </a>  
+
+**Frontend:**  
+- Next.js (App Router)  
+- Tailwind CSS  
+- ShadCN UI  
+
+**Backend:**  
+- LangChain JS  
+- OpenAI API  
+- GitHub REST API v3  
+- Vector Store: HNSWLib  
+
+**Hosting:**  
+- Vercel (both frontend & backend)  
+
+---
+
+## <a name="repositories"> **📂 Repositories** </a>  
+
+🔹 **Backend Repository:** [https://github.com/MYSELF-SAYAN/github_readme_backend](https://github.com/MYSELF-SAYAN/github_readme_backend)  
+
+---
+
+## <a name="contributing"> **Contributing** </a>  
+
+Contributions, suggestions, or feature requests are more than welcome! 🚀  
+
+📌 **How to Contribute:**  
+1. Fork this repository.  
+2. Create a new branch (`feature-branch`).  
+3. Commit your changes.  
+4. Push the branch and open a PR.  
+
+Feel free to raise issues for bugs, enhancements, or ideas!  
+
+🙌 Let’s make README generation smarter, faster, and developer-friendly — together!  
